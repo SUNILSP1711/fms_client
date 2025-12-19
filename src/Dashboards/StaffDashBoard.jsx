@@ -28,7 +28,7 @@ const StaffDashboard = () => {
 
     const fetchFacilities = async () => {
         try {
-            const res = await fetch(`${API_URL}/facilities`);
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/facilities");
             const data = await res.json();
             setFacilities(data);
         } catch (err) {
@@ -39,7 +39,7 @@ const StaffDashboard = () => {
     const fetchMyBookings = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/bookings/my`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/bookings/my", {
                 headers: { 'x-auth-token': token }
             });
             const data = await res.json();
@@ -52,7 +52,7 @@ const StaffDashboard = () => {
     const fetchMyIssues = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/issues/my`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/issues/my", {
                 headers: { 'x-auth-token': token }
             });
             const data = await res.json();
@@ -95,7 +95,7 @@ const StaffDashboard = () => {
         try {
             const token = localStorage.getItem('token');
             const timeSlot = `${bookingData.startTime} - ${bookingData.endTime}`;
-            const res = await fetch(`${API_URL}/bookings`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/bookings", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ const StaffDashboard = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/issues`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/issues", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

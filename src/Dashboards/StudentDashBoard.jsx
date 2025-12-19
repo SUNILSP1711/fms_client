@@ -20,7 +20,7 @@ const StudentDashboard = () => {
 
     const fetchFacilities = async () => {
         try {
-            const res = await fetch(`${API_URL}/facilities`);
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/facilities");
             const data = await res.json();
             setFacilities(data);
         } catch (err) {
@@ -31,7 +31,7 @@ const StudentDashboard = () => {
     const fetchMyIssues = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/issues/my`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/issues/my", {
                 headers: { 'x-auth-token': token }
             });
             const data = await res.json();
@@ -67,7 +67,7 @@ const StudentDashboard = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/issues`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/issues", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

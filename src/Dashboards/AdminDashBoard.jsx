@@ -31,7 +31,7 @@ const AdminDashboard = () => {
 
     const fetchFacilities = async () => {
         try {
-            const res = await fetch(`${API_URL}/facilities`);
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/facilities");
             const data = await res.json();
             setFacilities(data);
         } catch (err) {
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
     const fetchBookings = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/bookings`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/bookings", {
                 headers: { 'x-auth-token': token }
             });
             const data = await res.json();
@@ -55,7 +55,7 @@ const AdminDashboard = () => {
     const fetchIssues = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/issues`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/issues", {
                 headers: { 'x-auth-token': token }
             });
             const data = await res.json();
@@ -86,7 +86,7 @@ const AdminDashboard = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/facilities`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/facilities", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ const AdminDashboard = () => {
     const handleUpdateStatus = async (id, status) => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/bookings/${id}`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/bookings/${id}", {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ const AdminDashboard = () => {
     const handleResolveIssue = async (id) => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`${API_URL}/issues/${id}/resolve`, {
+            const res = await fetch("https://fms-server-qb61.onrender.com/api/issues/${id}/resolve", {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
