@@ -1,14 +1,14 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './Components/Header'
-import Home from './Pages/Home'
-import About from './Pages/About'
-import Contact from './Pages/Contact'
-import Signin from './Pages/Signin'
-import Signup from './Pages/Signup'
-import AdminDashboard from './Dashboards/AdminDashboard'
-import StaffDashboard from './Dashboards/StaffDashboard'
-import StudentDashboard from './Dashboards/StudentDashboard'
+import Header from "./Components/Header.jsx"
+import Home from "./Pages/Home.jsx"
+import About from "./Pages/About.jsx"
+import Contact from "./Pages/Contact.jsx"
+import Signin from "./Pages/Signin.jsx"
+import Signup from "./Pages/Signup.jsx"
+import AdminDashboard from "./Dashboards/AdminDashboard.jsx"
+import StaffDashboard from "./Dashboards/StaffDashboard.jsx"
+import StudentDashboard from "./Dashboards/StudentDashboard.jsx"
 
 const App = () => {
   return (
