@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { API_URL } from '../config';
 
 const Signup = () => {
     const [role, setRole] = useState('');
@@ -13,7 +12,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${API_URL}/auth/register`, {
+            const response = await fetch("https://fms-server-qb61.onrender.com/api/auth/register", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
