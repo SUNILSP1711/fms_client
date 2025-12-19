@@ -6,9 +6,9 @@ import About from "./Pages/About.jsx"
 import Contact from "./Pages/Contact.jsx"
 import Signin from "./Pages/Signin.jsx"
 import Signup from "./Pages/Signup.jsx"
-import AdminDashboard from "./Dashboards/AdminDashboard.jsx"
-import StaffDashboard from "./Dashboards/StaffDashboard.jsx"
-import StudentDashboard from "./Dashboards/StudentDashboard.jsx"
+import AdminDashboard from "./Dashboards/AdminDashBoard"
+import StaffDashboard from "./Dashboards/StaffDashBoard"
+import StudentDashboard from "./Dashboards/StudentDashBoard"
 
 const App = () => {
   return (
